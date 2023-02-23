@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+</head>
+<style>
+    *{
+      
+        background: rgb(240, 243, 243);
+           font-family: Arial, Helvetica, sans-serif;
+    }
+    .cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+    }
+    .title{
+padding-top: 10rem;
+padding-left: 10rem;
+
+
+      
+    }
+    
+img{
+    width: 63%;
+    margin-left: -6%;
+
+}
+  
+    p{
+       
+        font-size: 1.9rem;
+        text-align: start;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(62, 55, 55);
+          display: flex;
+  justify-content: start;
+  margin-top: -3%;
+
+    }
+        .login{
+      
+        padding: 1.5rem;
+        border-radius: .5rem;
+        box-shadow: 1px 1px 1px 2px rgba(0,0.1, 0, 0.1);
+        background: #fff;
+ 
+    width: 50%;
+    margin: 5rem 10rem 10rem 10rem;
+
+
+    }
+
+input:focus{
+    outline-color: rgb(38, 127, 244);
+    outline-width: .5px;
+    outline-style: solid;
+
+
+}
+input:focus::placeholder{
+     color: #cbc9c9;
+}
+
+     input[type=text]{
+        width: 90%;
+        height: 3rem;
+        border-radius: .5rem;
+        border: 1px solid gainsboro;
+        font-size: 1rem;
+        background: #fff;
+        padding: 0 1rem;
+    
+        
+    }
+   
+    input[type=submit]{
+        width: 100%;
+        border: none;
+        border-radius: .5rem;
+        font-weight: bolder;
+        line-height: 2rem;
+        background:  rgb(38, 127, 244);
+        height: 3rem;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    .f{
+          color: rgb(38, 127, 244);
+        width: 100%;
+        background:none;
+        text-align: center;
+        justify-content: center;
+    }
+    .f span{
+        background: none;
+        cursor: pointer;
+    }
+        .f span:hover{
+   text-decoration: underline;
+    }
+
+
+ ::-webkit-input-placeholder{
+
+        color: #9d9898;
+    }
+    .btn{
+        width: 100%;
+        background: #fff;
+           display: flex;
+       justify-content: center;
+    }
+        button
+    {
+    
+       padding: 0 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+          border: none;
+        border-radius: .5rem;
+        font-weight: bolder;
+        line-height: 2rem;
+        background: rgb(61, 193, 4);
+        height: 3rem;
+        color: #fff;
+    }
+    .p
+    {
+      font-size: 15px;
+    
+        display: flex;
+        justify-content: center;
+        line-height: 5px;
+        margin-top: -20%;
+     margin-left: 30px;
+    }
+.p .create{
+    margin-right: 5px;
+    font-weight: bold;
+      cursor: pointer;
+}
+.p .create:hover{
+    text-decoration: underline;
+}
+  
+</style>
+<body>
+    <div class="cont">
+
+  <div class="title">
+    <img src="dF5SId3UHWd.svg" alt="">
+<p> Connect with friends and the world around you on Facebook.</p>
+    </div>
+    <div>
+    <div class="login">
+        <input type="text" placeholder="Email or phone number"><br><br>
+        <input type="text" placeholder="Password"><br><br>
+        <input type="submit" value="Log In"><br><br>
+        <div class="f"><span>Forgot password?</span>
+        </div> <br>
+
+   <hr class="hr"><br>
+   <div class="btn">
+        <button>Create new account</button>
+        </div>
+      
+    </div>
+    <div class="p"><span class="create">Create a Page </span><span> for a celebrity, brand or business.</span> </div>
+    </div>
+    </div>
+</body>
+</html>
