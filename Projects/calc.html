@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container{
+            background: #000;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        .calculator{
+            padding: 1rem;
+            border-radius: .5rem;
+          box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
+          height: 400px;
+
+        }
+        .numbers{
+             display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 2rem .5rem;
+        }
+        input[type="button"]{
+            border-radius: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            font-weight: bolder;
+            display:block; height: 50px; width: 50px;
+            border: none;
+              box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);
+             cursor: pointer;
+              background: #fff;
+
+
+        }
+           input[type="button"]:hover{
+            background: rgb(116, 109, 109);
+            color:#f0e9e9;
+        }
+        input[type=text]{
+            background: rgb(92, 152, 7);
+            margin-bottom: 1rem;
+            height: 3rem;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            border: none;
+             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                 border-radius: .5rem;
+                 text-align: end;
+                 color: #000;
+       
+
+        }
+        input[type=text]::placeholder{
+            color: #000;
+        }
+
+  input[type="button"]:nth-child(4n), input[type="button"]:nth-child(13), input[type="button"]:nth-child(15)
+  {
+background: rgb(250, 226, 9);
+  }
+
+
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="display" disabled placeholder="0">
+            <div class="numbers">
+            <input type="button" value="1">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" value="/">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="*">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="-">
+            <input type="button" value="C">
+            <input type="button" value="0">
+            <input type="button" value="=">
+            <input type="button" value="+">
+            </div>
+        </div>
+    </div>
+    <script>
+    const buttons = document.querySelectorAll("input[type='button']");
+    const display = document.querySelector("#display");
+   
+    buttons.forEach(button =>{
+        button.addEventListener("click", function(){
+            let value = this.value;
+          if(value === "C")
+          {
+              display.value = "";
+          }
+           
+          
+          else if(value === "="){
+            display.value = eval(display.value);
+          }
+          else
+          {
+              display.value += value;
+          }
+          
+        });
+    });
+    </script>
+</body>
+</html>
